@@ -1,8 +1,15 @@
 # Environments
 .env
 
+# Go
+go.sum
+
 # Local .terraform directories
 **/.terraform/*
+
+# .tfplan files
+*.tfplan
+*.tfplan.*
 
 # .tfstate files
 *.tfstate
