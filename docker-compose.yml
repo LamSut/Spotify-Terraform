@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  spotify-auth-proxy:
+    image: ghcr.io/conradludgate/spotify-auth-proxy
+    container_name: spotify-auth-proxy
+    ports:
+      - "27228:27228"
+    environment:
+      SPOTIFY_CLIENT_ID: ${SPOTIFY_CLIENT_ID}
+      SPOTIFY_CLIENT_SECRET: ${SPOTIFY_CLIENT_SECRET}
+    env_file:
+      - .env
