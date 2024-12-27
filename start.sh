@@ -15,7 +15,7 @@ if [ -z "$API_KEY" ] || [ -z "$AUTH_URL" ]; then
     exit 1
 fi
 
-echo "spotify_api_key = \"$API_KEY\"" > src/terraform.tfvars
+echo "spotify_api_key = \"$API_KEY\"" > terraform/terraform.tfvars
 echo "Saved API Key to successfully!"
 echo "Your Spotify API Key: $API_KEY"
 
