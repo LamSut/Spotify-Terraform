@@ -1,7 +1,7 @@
 #!/bin/bash
 
+cd src
 docker-compose up -d
-
 sleep 5
 
 LOGS=$(docker logs spotify-auth-proxy 2>&1)
@@ -17,7 +17,7 @@ if [ -z "$API_KEY" ] || [ -z "$AUTH_URL" ]; then
 fi
 
 echo "spotify_api_key = \"$API_KEY\"" > terraform.tfvars
-echo "Saved API Key to terraform.tfvars successfully!"
+echo "Saved API Key to successfully!"
 echo "Your Spotify API Key: $API_KEY"
 
 echo "Your Spotify Auth URL: $AUTH_URL"
